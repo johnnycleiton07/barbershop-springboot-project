@@ -35,13 +35,13 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="agendamentos : ${agendamentos}">
-				<td><span th:text="${agendamentos.nomeCliente}"></span></td>
-				<td><span th:text="${agendamentos.contato}"></span></td>
-				<td><span th:text="${agendamentos.data}"></span></td>
-				<td><span th:text="${agendamentos.horario}"></span></td>
+			<tr th:each="agendamento : ${agendamentos}">
+				<td><span th:text="${agendamento.nomeCliente}"></span></td>
+				<td><span th:text="${agendamento.contato}"></span></td>
+				<td><span th:text="${agendamento.data}"></span></td>
+				<td><span th:text="${agendamento.horario}"></span></td>
 			</tr>
-		</body>
+		</tbody>
 	
 	</table>
 	</div>

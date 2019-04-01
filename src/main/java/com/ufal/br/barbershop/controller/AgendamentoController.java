@@ -28,7 +28,7 @@ public class AgendamentoController {
 		return "redirect:/agendarServico";
 	}
 	
-	@RequestMapping("/agenda")
+	@RequestMapping("/agendamentos")
 	public ModelAndView listarAgendamentos() {
 		ModelAndView mv = new ModelAndView("index");
 		Iterable<Agendamento> agendamentos = ar.findAll();
