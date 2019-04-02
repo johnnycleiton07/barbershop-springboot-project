@@ -23,8 +23,17 @@
 </head>
 <body>
 
-	<h1>AGENDA</h1>	
-	<h3><a href="/agendarServico" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Agendar Serviço</a></h3>
+	<header>
+		 <nav>
+		    <div class="nav-wrapper">
+		      <a href="#" class="brand-logo">Agenda</a>
+		      <ul id="nav-mobile" class="right hide-on-med-and-down">
+		        <li><a href="/agendarServico" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Agendar Serviço</a></li>
+		        
+		      </ul>
+		    </div>
+		  </nav>
+	</header>
 	<table class="container">
 		<thead>
 			<tr>
@@ -32,6 +41,7 @@
 				<th>Contato</th>
 				<th>Data</th>
 				<th>Horario</th>
+				<th>Deletar</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -40,6 +50,7 @@
 				<td><span th:text="${agendamento.contato}"></span></td>
 				<td><span th:text="${agendamento.data}"></span></td>
 				<td><span th:text="${agendamento.horario}"></span></td>
+				<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('AC#deletarAgendamento').arg(0, agendamento.codigo)).build()}"><i class="material-icons left">delete_forever</i</a></td>
 			</tr>
 		</tbody>
 	

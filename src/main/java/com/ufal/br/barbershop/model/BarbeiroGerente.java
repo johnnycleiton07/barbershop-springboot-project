@@ -6,8 +6,6 @@ public class BarbeiroGerente {
 	
 	private String senha;
 	
-	private String nome;
-	
 	public String getLogin() {
 		return login;
 	}
@@ -22,14 +20,6 @@ public class BarbeiroGerente {
 	
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}
-	
-	public String getNome() {
-		return nome;
-	}
-	
-	public void setNome(String nome) {
-		this.nome = nome;
 	}
 
 }

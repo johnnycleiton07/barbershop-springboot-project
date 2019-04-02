@@ -20,6 +20,14 @@ public class AgendamentoController {
 		return "agenda/formAgenda";
 	}
 	
+	@RequestMapping("/deletar")
+	public String deletarAgendamento(long codigo) {
+		Agendamento agendamento = ar.findByCodigo(codigo);
+		ar.delete(agendamento);
+		return "redirect:/agendamentos";
+	}
+	
+	
 	@RequestMapping(value="/agendarServico", method=RequestMethod.POST)
 	public String form(Agendamento agenda) {
 		

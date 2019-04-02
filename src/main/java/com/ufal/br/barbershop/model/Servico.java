@@ -22,6 +22,4 @@ public class Servico {
 		this.codigoServico = codigoServico;
 	}
 	
-	
-
 }
