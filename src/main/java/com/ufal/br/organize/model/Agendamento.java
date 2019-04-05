@@ -1,15 +1,18 @@
-package com.ufal.br.barbershop.model;
+package com.ufal.br.organize.model;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="agendamentos")
+@Table(name="agendamento")
 public class Agendamento implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
@@ -18,22 +21,24 @@ public class Agendamento implements Serializable{
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private long codigo;
 	
-	private String nomeCliente;
+	@OneToOne(cascade= CascadeType.ALL, optional = false)
+	@JoinColumn(name= "id_cliente", referencedColumnName = "id")
+	private Cliente cliente;
 	
 	private String contato;
 	
 	private String data;
 	
 	private String horario;
-
-	public String getNomeCliente() {
-		return nomeCliente;
-	}
-
-	public void setNomeCliente(String nomeCliente) {
-		this.nomeCliente = nomeCliente;
-	}
 	
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
 	public String getContato() {
 		return contato;
 	}

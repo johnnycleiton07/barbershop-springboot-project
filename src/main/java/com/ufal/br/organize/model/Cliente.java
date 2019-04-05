@@ -1,4 +1,4 @@
-package com.ufal.br.barbershop.model;
+package com.ufal.br.organize.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.ufal.br.barbershop.controller;
+package com.ufal.br.organize.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

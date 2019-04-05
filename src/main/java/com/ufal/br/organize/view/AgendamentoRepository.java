@@ -1,8 +1,8 @@
-package com.ufal.br.barbershop.view;
+package com.ufal.br.organize.view;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.ufal.br.barbershop.model.Agendamento;
+import com.ufal.br.organize.model.Agendamento;
 
 public interface AgendamentoRepository extends CrudRepository<Agendamento, String>{
 
