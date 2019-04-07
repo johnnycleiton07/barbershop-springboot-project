@@ -22,7 +22,7 @@ public class Agendamento implements Serializable{
 	private long codigo;
 	
 	@OneToOne(cascade= CascadeType.ALL, optional = false)
-	@JoinColumn(name= "id_cliente", referencedColumnName = "id")
+	@JoinColumn(referencedColumnName = "id")
 	private Cliente cliente;
 	
 	private String contato;

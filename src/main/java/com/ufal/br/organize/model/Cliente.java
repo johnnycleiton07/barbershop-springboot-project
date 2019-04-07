@@ -1,5 +1,7 @@
 package com.ufal.br.organize.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,21 +10,23 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="cliente")
-public class Cliente {
+public class Cliente implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
+
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@GeneratedValue(strategy= GenerationType.AUTO)
 	private long id;
 	
 	private String nome;
 	
-	private int cpf;
+	private String cpf;
 	
 	private String endereco;
 	
 	public Cliente() {}
 	
-	public Cliente(String nome, int cpf, String endereco) {
+	public Cliente(String nome, String cpf, String endereco) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.endereco = endereco;
@@ -45,11 +49,11 @@ public class Cliente {
 		this.nome = nome;
 	}
 
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
