@@ -28,8 +28,8 @@
 		    <div class="nav-wrapper">
 		      <a href="#" class="brand-logo">Lista de Clientes</a>
 		      <ul id="nav-mobile" class="right hide-on-med-and-down">
-		      	<li><a href="/agendamento" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Consultar Agenda</a></li>
-		        <li><a href="/cadastrarCliente" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar Cliente</a></li>
+		      	<li><a href="/agendamento" class="waves-effect waves-light btn"><i class="material-icons left">assignment</i>Consultar Agenda</a></li>
+		        <li><a href="/cadastrarCliente" class="waves-effect waves-light btn"><i class="material-icons left">assignment_ind</i>Cadastrar Cliente</a></li>
 		      </ul>
 		    </div>
 		  </nav>
@@ -44,9 +44,9 @@
 		</thead>
 		<tbody>
 			<tr th:each="cliente : ${cliente}">
-				<td><span th:text="${agendamento.nome}"></span></td>
-				<td><span th:text="${agendamento.cpf}"></span></td>
-				<td><span th:text="${agendamento.endereco}"></span></td>
+				<td><span th:text="${cliente.nome}"></span></td>
+				<td><span th:text="${cliente.cpf}"></span></td>
+				<td><span th:text="${cliente.endereco}"></span></td>
 				<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('CC#deletarCliente').arg(0, cliente.id)).build()}"><i class="material-icons left">delete_forever</i</a></td>
 			</tr>
 		</tbody>

@@ -6,6 +6,6 @@ import com.ufal.br.organize.model.Cliente;
 
 public interface ClienteRepository extends CrudRepository<Cliente, String> {
 
-	Cliente findByCodigo(long id);
+	Cliente findById(long id);
 	
 }

@@ -24,7 +24,7 @@ public class AgendamentoController {
 	public String deletarAgendamento(long codigo) {
 		Agendamento agendamento = ar.findByCodigo(codigo);
 		ar.delete(agendamento);
-		return "redirect:/agendamentos";
+		return "redirect:/agendamento";
 	}
 	
 	
@@ -36,11 +36,11 @@ public class AgendamentoController {
 		return "redirect:/agendarServico";
 	}
 	
-	@RequestMapping("/agendamentos")
+	@RequestMapping("/agendamento")
 	public ModelAndView listarAgendamentos() {
 		ModelAndView mv = new ModelAndView("index");
-		Iterable<Agendamento> agendamentos = ar.findAll();
-		mv.addObject("agendamentos", agendamentos);
+		Iterable<Agendamento> agendamento = ar.findAll();
+		mv.addObject("agendamento", agendamento);
 		return mv;
 	}
 
