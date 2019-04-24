@@ -1,18 +1,18 @@
 # ORGANIZE PROJECT (SpringBoot)
 
-Organize é um sistema web extremamente simples que possui uma utilidade voltada ao agendamento de serviços em geral. A ideia é que o sistema seja útil para auxiliar na organização para prestação de serviços.
+Organize é um sistema web extremamente simples que possui uma utilidade voltada ao agendamento de serviços em geral. A ideia é que o sistema seja útil para auxiliar na organização voltada à prestação de serviços.
 
-Implementado em Java, utilizando o Eclipse IDE e as seguintes ferramentas: 
-
-* SpringBoot - seu objetivo é fornecer um conjunto de ferramentas para a construção rápida de aplicativos Spring que sejam fáceis de configurar.
-
-* Thymeleaf - é uma biblioteca Java capaz de aplicar um conjunto de transformações nos modelos XML/XHTML/HTML5. Pode funcionar tanto em ambiente web como fora da web.
+Implementado em Java, utilizando as seguintes ferramentas: SpringBoot e Thymeleaf.
 
 
-### Equipe:
+## RODANDO O PROJETO NO PC
 
-* André Ricardo
-* Gabriel Almeida
-* Johnny Cleiton
+Para ter o Organize funcionando no PC é necessário ter o Eclipse IDE instalado e abrir o projeto através do Mavem, que será o responsável por automatizar todo o processo de gerenciamento de dependências (bibliotecas / frameworks) fundamentais para rodar a aplicação. O arquivo _pom.xml_ possui toda a configuração do Mavem.
 
-Projeto final da disciplina de **Laboratório de Programação 2** ministrada pelo professor Thiago Sales.
+Também é necessário ter o MySQL funcionando na máquina e criar um banco de dados chamado "Agenda". Quando a aplicação for rodada pela primeira vez, serão criadas duas tabelas dentro de Agenda com o mesmo nome das duas classes model do projeto (_"agendamento"_ e _"cliente"_), essas tabelas guardarão os dados preenchidos na aplicação.
+
+
+## OBSERVAÇÕES
+
+#### Bugs para consertar:
+- A página de agendamento não está salvando os dados, pois a coluna _"cliente_id"_ responsável por associar o cliente já cadastrado ao agendamento do serviço, está ficando vazia (Null).
